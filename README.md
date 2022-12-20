@@ -1,5 +1,9 @@
 # CircleGit
- 
-python script made for educational purposes
-
-napisz program w języku programowania python. wielkość okna 800x800px z tłem w kolorze ciemno szarym Program będzie opierał się na kółkach pierwsze kółko w kolorze czerwonym, a drugie kółko w kolorze zielonym, które pojawiają się w losowym miejscu przy starcie programu. Kółka mają odbijać się od ścianek programu z prędkością 10px na sekundę.
+## The program is based on the wheels bouncing off the application walls.
+#### In the source code there is a Polish translation of the given lines of code
+##### 
+- The following Python libraries were used in the project
+        import sys
+        import pygame
+        import random
+###### python script made for educational purposes
