@@ -6,4 +6,6 @@
         import sys
         import pygame
         import random
+
+![Video](https://imgur.com/L3yry1G "Video")
 ###### python script made for educational purposes
