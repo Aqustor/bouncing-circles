@@ -33,65 +33,65 @@ circles = []
 
 # Utworzenie kółek czerwonych
 for i in range(num_red_circles):
-  # Losowanie położenia początkowego kółka
-  x = random.randint(0, window_size[0])
-  y = random.randint(0, window_size[1])
-  # Utworzenie kółka z odpowiednimi parametrami
-  circle = {"color": circle_colors[0], "radius": 25, "position": (x, y), "direction": (circle_speed, circle_speed)}
-  # Dodanie kółka do listy
-  circles.append(circle)
+    # Losowanie położenia początkowego kółka
+    x = random.randint(0, window_size[0])
+    y = random.randint(0, window_size[1])
+    # Utworzenie kółka z odpowiednimi parametrami
+    circle = {"color": circle_colors[0], "radius": 25, "position": (x, y), "direction": (circle_speed, circle_speed)}
+    # Dodanie kółka do listy
+    circles.append(circle)
 
 # Utworzenie kółek zielonych
 for i in range(num_green_circles):
-  # Losowanie położenia początkowego kółka
-  x = random.randint(0, window_size[0])
-  y = random.randint(0, window_size[1])
-  # Utworzenie kółka z odpowiednimi parametrami
-  circle = {"color": circle_colors[1], "radius": 25, "position": (x, y), "direction": (circle_speed, circle_speed)}
-  # Dodanie kółka do listy
-  circles.append(circle)
+    # Losowanie położenia początkowego kółka
+    x = random.randint(0, window_size[0])
+    y = random.randint(0, window_size[1])
+    # Utworzenie kółka z odpowiednimi parametrami
+    circle = {"color": circle_colors[1], "radius": 25, "position": (x, y), "direction": (circle_speed, circle_speed)}
+    # Dodanie kółka do listy
+    circles.append(circle)
 
 # Główna pętla programu
 while True:
-  # Ustawienie ilości klatek na sekundę
-  clock.tick(60)
+    # Ustawienie ilości klatek na sekundę
+    clock.tick(60)
 
-  # Pętla zdarzeń
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      pygame.quit()
-      sys.exit()
+    # Pętla zdarzeń
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
 
-  # Aktualizacja położenia kółek
-  for circle in circles:
-    # Pobranie aktualnego położenia kółka
-    x, y = circle["position"]
-    # Pobranie kierunku ruchu kółka
-    dx, dy = circle["direction"]
-    # Aktualizacja położenia kółka
-    x += dx
-    y += dy
-    # Sprawdzenie, czy kółko nie wyszło poza granice okna
-    if x < 0 or x > window_size[0]:
-      dx = -dx
-    if y < 0 or y > window_size[1]:
-      dy = -dy
-    # Uaktualnienie kierunku ruchu kółka
-    circle["direction"] = (dx, dy)
-    # Uaktualnienie położenia kółka
-    circle["position"] = (x, y)
+    # Aktualizacja położenia kółek
+    for circle in circles:
+        # Pobranie aktualnego położenia kółka
+        x, y = circle["position"]
+        # Pobranie kierunku ruchu kółka
+        dx, dy = circle["direction"]
+        # Aktualizacja położenia kółka
+        x += dx
+        y += dy
+        # Sprawdzenie, czy kółko nie wyszło poza granice okna
+        if x < 0 or x > window_size[0]:
+            dx = -dx
+        if y < 0 or y > window_size[1]:
+            dy = -dy
+        # Uaktualnienie kierunku ruchu kółka
+        circle["direction"] = (dx, dy)
+        # Uaktualnienie położenia kółka
+        circle["position"] = (x, y)
 
-  # Wyświetlenie tła
-  screen.fill(background_color)
+    # Wyświetlenie tła
+    screen.fill(background_color)
 
-  # Wyświetlenie kółek
-  for circle in circles:
-    # Pobranie koloru i położenia kółka
-    color = circle["color"]
-    x, y = circle["position"]
-    radius = circle["radius"]
-    # Utworzenie obiektu reprezentującego kółko
-    pygame.draw.circle(screen, color, (x, y), radius)
+    # Wyświetlenie kółek
+    for circle in circles:
+        # Pobranie koloru i położenia kółka
+        color = circle["color"]
+        x, y = circle["position"]
+        radius = circle["radius"]
+        # Utworzenie obiektu reprezentującego kółko
+        pygame.draw.circle(screen, color, (x, y), radius)
 
-  # Wyświetlenie zmian na ekranie
-  pygame.display.flip()
+    # Wyświetlenie zmian na ekranie
+    pygame.display.flip()
