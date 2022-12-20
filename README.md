@@ -7,5 +7,5 @@
         import pygame
         import random
 
-![Video](https://imgur.com/L3yry1G "Video")
+[![Video Preview](https://imgur.com/L3yry1G "Video Preview")](https://imgur.com/L3yry1G "Video Preview")
 ###### python script made for educational purposes
