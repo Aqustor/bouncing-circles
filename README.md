@@ -1,4 +1,4 @@
-# CircleGit
+# Bouncing Circles
 ## The program is based on the wheels bouncing off the application walls.
 #### In the source code there is a Polish translation of the given lines of code
 ##### 
